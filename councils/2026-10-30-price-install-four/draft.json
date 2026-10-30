@@ -1,0 +1,18 @@
+{
+  "option": "A",
+  "label": "GO WITH CONDITIONS",
+  "recommendation": "Quote $3,500 from install #4 in December, only after 3 closes at $2,000 by 2026-11-30 and an install 1 log over 13 hours. Keep the $500 tier off the price list until a runbook exists.",
+  "conditions": [
+    "3 installs close at $2,000 by 2026-11-30, at 30% close rate or better",
+    "Install 1 logs more than 13 hours all-in by 2026-11-13",
+    "Tuning capped in writing at 5 hours with three named deliverables",
+    "The $3,500 offer carries a 20-ideas-a-week guarantee by day 30"
+  ],
+  "next_steps": [
+    "This week: start the hours log and screen-record install 1",
+    "By 2026-11-13: log install 1 and write the tuning definition of done",
+    "2026-12-01: count closes and decide the December quote"
+  ],
+  "cheapest_test": "Quote $3,500 to the next 5 qualified prospects in December.",
+  "kill_criteria": "Under 3 closes by 2026-11-30 keeps $2,000; 0 of 5 closes at $3,500 by 2026-12-31 goes back to $2,000."
+}
