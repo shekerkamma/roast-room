@@ -144,6 +144,25 @@ YouTube transcripts and photos work best with [yt-dlp](https://github.com/yt-dlp
 
 Run `npm start`, open http://localhost:4730, and click **Past sessions**. Three finished councils ship with the repo, so you can see how it works (and download their PDFs) before you run your own.
 
+## See it online, or run it on your machine
+
+There are two ways to use the room, and they do different jobs.
+
+**Online (nothing to install): replay and share councils.** The room is published as a static site at **https://shekerkamma.github.io/roast-room/**. It replays the example councils and every council kept in `councils/`, shows each verdict, and downloads its PDF. It cannot run a new council: the advisors are Claude Code agents, so councils run on your machine. A GitHub Actions workflow (`.github/workflows/pages.yml`) rebuilds the site on every push to `main`. Your own `sessions/` are never published; copy a finished council into `councils/` to publish it.
+
+**On your machine: run councils live.** This is the full room, and the setup above:
+
+```bash
+git clone https://github.com/shekerkamma/roast-room.git
+cd roast-room
+npm start            # the room, at http://localhost:4730
+claude               # in a second terminal, same folder
+```
+
+Then type `/roast-room` and your decision in Claude Code and watch the room. Councils that run inside a cloud session (Claude Code on the web) play in a room inside that cloud machine, which your browser cannot reach as `localhost`; open it on your own machine instead, or publish the finished council through `councils/`.
+
+**Check the online build locally** before pushing: `npm run preview:static` builds `site/` and serves it the way GitHub Pages does.
+
 ## How it works
 
 - **The council runs in Claude Code.** Each seat is a sub-agent (`.claude/agents/council-*.md`, listed in `roster.json`) that reads its own brain (`.claude/skills/roast-room/brains/<name>/`): frameworks, principles, positions, stories, and voice notes compiled from public sources, with every quote tied to a source. Claude Code acts as the Chair. It runs the rounds, keeps score, and writes the verdict (`.claude/skills/roast-room/SKILL.md`).

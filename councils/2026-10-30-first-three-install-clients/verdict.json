@@ -1,0 +1,41 @@
+{
+  "label": "GO",
+  "call": "Go with B: message the 20 consultants by Nov 2 at full price with a fixed-scope guarantee, log install 1's hours, and let that number decide two or three November installs.",
+  "recommended": "B",
+  "why": [
+    { "point": "Warm outreach is the cheapest way to leads you can close this month.", "seat": "Hormozi", "framework": "Core Four" },
+    { "point": "Twenty conversations test demand in two weeks; A and C are forms of waiting.", "seat": "Graham", "framework": "Do things that don't scale" },
+    { "point": "About 43 founder hours means three installs fit only under 12 hours each.", "seat": "Martell", "framework": "Buyback Rate" },
+    { "point": "LinkedIn at under 2,000 followers cannot land a $2,000 buyer in 30 days.", "seat": "Welsh", "framework": "Where this lens misfires" }
+  ],
+  "minority": { "seat": "Graham", "quote": "the 15% close rate assumes the pain is real. Nobody has shown me a single consultant who is losing money because they don't know what to post.", "would_have_to_be_true": "At least 5 of the 20 reply by Nov 6, showing the pain is real." },
+  "next_steps": [
+    { "when": "By 2026-11-02", "action": "Write the one-page offer with the guarantee and send the 20 messages." },
+    { "when": "By 2026-11-13", "action": "Finish install 1, log its hours, and turn the recording into a definition of done." },
+    { "when": "2026-11-30", "action": "Count installs, usage, and outside signals; decide December's price and partners." }
+  ],
+  "kill_criteria": "Fewer than 5 of the 20 reply by 2026-11-06: stop selling and rebuild the offer.",
+  "conditions": [
+    "20 messages by 2026-11-02 with price, a niche feed, and a direct ask",
+    "Guarantee: 20 usable ideas within 4 capped tuning hours, or a full refund",
+    "Install 1 plus tuning logged by 2026-11-13; over 12 hours caps November at two and the next quote at $3,000",
+    "Ask every buyer for two names",
+    "Agency owners pitched as buyers first; no 30% split until install 2 has a testimonial",
+    "Day 21: 2 of 3 buyers posting from the feed; by 2026-11-30 one signal from outside the 20"
+  ],
+  "fights": [
+    { "crux": "Should agency partners start now?", "story": "Round 1 was unanimous on B, so the Chair forced the case for C. Hormozi argued it at full strength; Martell agreed with the logic but said the calendar kills it. Resolved: agency owners pitched as buyers, no split until install 2 is proven." },
+    { "crux": "Do three installs fit in 43 hours?", "story": "Martell's 10-hour estimate met Hormozi's and Buffett's 15 to 20. Martell moved to two guaranteed; the rule is a third start only if install 1 is 12 hours or less." },
+    { "crux": "Do warm yeses prove demand?", "story": "Graham said friend payments prove loyalty. All six now require a signal from outside the 20, and Graham added a day-21 usage test." }
+  ],
+  "amendments": [
+    { "seat": "Hormozi", "amendment": "Define usable as 20 ideas; hit it inside the 4 capped hours or refund in full.", "adopted": true, "reason": "Raised independently by Hormozi, Martell, and Buffett; no objection." },
+    { "seat": "Martell", "amendment": "Log tuning hours with the install; the 12-hour line covers both.", "adopted": true, "reason": "No objection." },
+    { "seat": "Graham", "amendment": "Day-21 usage test: 2 of 3 buyers posting from the feed.", "adopted": true, "reason": "No objection; a DM alone is a weak signal." },
+    { "seat": "Welsh", "amendment": "Pitch agency owners as buyers first; no split until install 2 has a testimonial.", "adopted": true, "reason": "The hours argument against early partners went unanswered." },
+    { "seat": "Welsh", "amendment": "End every post with an email signup link.", "adopted": true, "reason": "No objection and no added hours." }
+  ],
+  "cheapest_test": "Sample feeds on the real competitors of the 5 warmest contacts, sent with the price this week.",
+  "revisit": "2026-11-30 with install hours, replies, paid installs, day-21 usage, and outside inbound.",
+  "override_note": "Round 1 was unanimous on B, so the Chair made C argue at full strength in Round 2."
+}

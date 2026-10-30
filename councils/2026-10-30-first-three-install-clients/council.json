@@ -1,0 +1,22 @@
+{
+  "title": "First 3 install clients",
+  "decision": "Which channel lands the first 3 paid $2,000 installs by Nov 30.",
+  "mode": "full",
+  "options": [
+    { "id": "A", "label": "Daily LinkedIn content" },
+    { "id": "B", "label": "Direct outreach to 20 consultants" },
+    { "id": "C", "label": "Two agency partners at 30%" },
+    { "id": "D", "label": "Wait and polish the product" }
+  ],
+  "weights": {
+    "hormozi": { "weight": 3, "reason": "Three sales is a lead and closing problem" },
+    "garyvee": { "weight": 3, "reason": "Option A is a content and attention bet" },
+    "welsh": { "weight": 2, "reason": "Solo, content-led selling, no audience yet" },
+    "graham": { "weight": 2, "reason": "Founder-led selling to first users" },
+    "martell": { "weight": 2, "reason": "10 hours a week is the constraint" },
+    "buffett": { "weight": 1, "reason": "Downside of the split and the $5k" }
+  },
+  "seats": ["hormozi", "garyvee", "welsh", "graham", "martell", "buffett"],
+  "brief": "A solo AI consultant at about $15k a month wants 3 paid $2,000 plugin installs by Nov 30 on 10 hours a week, with no email list. They lean toward direct outreach to 20 consultants.",
+  "assumptions": ["Network beyond the 20 is small (assumed)", "LinkedIn following under 2,000 (assumed)"]
+}

@@ -10,7 +10,9 @@ export const REPO_ROOT = KIT ? path.resolve(APP_ROOT, "..") : path.resolve(APP_R
 export const BRAINS_DIR = path.join(REPO_ROOT, ".claude", "skills", "roast-room", "brains");
 export const ROSTER = path.join(REPO_ROOT, ".claude", "skills", "roast-room", "roster.json");
 export const AGENTS_DIR = path.join(REPO_ROOT, ".claude", "agents");
-export const SESSIONS_DIR = KIT ? path.join(REPO_ROOT, "sessions") : path.join(REPO_ROOT, "projects", "founder-council", "sessions");
+// ROAST_SESSIONS_DIR lets the static export (scripts/export-static.mjs) read a curated folder.
+export const SESSIONS_DIR = process.env.ROAST_SESSIONS_DIR ? path.resolve(process.env.ROAST_SESSIONS_DIR)
+  : KIT ? path.join(REPO_ROOT, "sessions") : path.join(REPO_ROOT, "projects", "founder-council", "sessions");
 
 let cache = null;
 export function env(key) {

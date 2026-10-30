@@ -6,7 +6,11 @@
   "type": "module",
   "scripts": {
     "start": "node app/server.mjs",
-    "smoke": "node app/scripts/smoke.mjs"
+    "smoke": "node app/scripts/smoke.mjs",
+    "build:static": "node app/scripts/export-static.mjs site",
+    "preview:static": "node app/scripts/export-static.mjs site && npx --yes serve site"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

@@ -9,3 +9,6 @@ build/
 sessions/*
 !sessions/.gitkeep
 !sessions/*example*/
+
+# the static GitHub Pages build (npm run build:static); CI publishes it to gh-pages
+site/

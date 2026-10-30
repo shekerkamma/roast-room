@@ -14,7 +14,7 @@ function loadLib() {
   if (window.jspdf) return Promise.resolve();
   libReady ??= new Promise((res, rej) => {
     const s = document.createElement("script");
-    s.src = "/vendor/jspdf.umd.min.js";
+    s.src = "vendor/jspdf.umd.min.js";
     s.onload = res;
     s.onerror = () => rej(new Error("could not load the PDF library"));
     document.head.appendChild(s);
@@ -33,7 +33,7 @@ async function fetchBase64(url) {
 
 async function addFonts(doc) {
   for (const [file, style] of [["Montserrat-Regular.ttf", "normal"], ["Montserrat-SemiBold.ttf", "semibold"], ["Montserrat-Bold.ttf", "bold"]]) {
-    doc.addFileToVFS(file, await fetchBase64(`/brand/fonts/${file}`));
+    doc.addFileToVFS(file, await fetchBase64(`brand/fonts/${file}`));
     doc.addFont(file, "Montserrat", style);
   }
 }
@@ -50,7 +50,7 @@ export async function downloadVerdictPdf({ setup, verdict: ev, byKey, id }) {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ unit: "pt", format: "letter", compress: true });
   await addFonts(doc);
-  const logo = "data:image/png;base64," + (await fetchBase64("/brand/ais-horizontal-on-light.png"));
+  const logo = "data:image/png;base64," + (await fetchBase64("brand/ais-horizontal-on-light.png"));
 
   const v = ev.verdict;
   const seats = ev.seats || [];
