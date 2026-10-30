@@ -56,5 +56,6 @@ On-call seats (in `roster.json`, off the default board; the Chair recommends the
 - Elon (question the requirement, delete the step, attack the bottleneck now) against Wickman (give every process an owner and a cadence) and Buffett (keep cash, wait for the fat pitch). Elon and Graham agree on speed and split on whether a launch counts before the delivery system scales.
 - Elon's aggressive dates are for the team, not for customers or lenders; Martell and Leila own what his pace costs the people.
 - Leila Hormozi and Alex Hormozi are different seats and different people. Name them "Leila" and "Hormozi".
+- Welsh (one person, audience first, keep it easy to run) against Hormozi and Martell (more offers, more volume, hire to buy back time). Welsh and Naval agree on owning the audience and staying small, and split when Naval's leverage needs code the founder has to maintain.
 
 If Round 1 comes back unanimous, the Chair should be suspicious and press the seat whose pillar is most at risk in Round 2.

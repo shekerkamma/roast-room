@@ -1,0 +1,89 @@
+# Sources: Justin Welsh
+
+83 sources (83 web), 93,252 words. Video dates are upload dates. Every quote in this brain carries one of these ids.
+
+Format: id | title | url | date | words
+
+- S001 | Just one more year. | https://justinwelsh.me/essays/one-more-year | 2026-10-24 | 923
+- S002 | Go make some friends. | https://justinwelsh.me/essays/make-friends | 2026-10-17 | 871
+- S003 | Illegible careers. | https://justinwelsh.me/essays/illegible | 2026-10-10 | 610
+- S004 | Try the easy version first. | https://justinwelsh.me/essays/easy-version | 2026-10-03 | 1061
+- S005 | Maybe you’re one away. | https://justinwelsh.me/essays/one-away | 2026-09-26 | 916
+- S006 | Give yourself a raise. | https://justinwelsh.me/essays/give-yourself-a-raise | 2026-09-19 | 971
+- S007 | What if it works? | https://justinwelsh.me/essays/what-if-it-works | 2026-09-12 | 981
+- S008 | Before you make the deal. | https://justinwelsh.me/essays/make-the-deal | 2026-09-05 | 833
+- S009 | Your second choosing. | https://justinwelsh.me/essays/second-choosing | 2026-08-29 | 874
+- S010 | People deserve bad news. | https://justinwelsh.me/essays/bad-news | 2026-08-22 | 1086
+- S011 | The rule that worked too well. | https://justinwelsh.me/essays/the-rule | 2026-08-15 | 1224
+- S012 | Why are you taking this out on me? | https://justinwelsh.me/essays/taking-this-out | 2026-08-08 | 1121
+- S013 | Ask for what you want. | https://justinwelsh.me/essays/ask-for-what-you-want | 2026-08-01 | 1032
+- S014 | Mediocrity at scale. | https://justinwelsh.me/essays/mediocrity | 2026-07-25 | 1228
+- S015 | The machine is a mirror. | https://justinwelsh.me/essays/mirror | 2026-07-18 | 962
+- S016 | Having fun is the new moat. | https://justinwelsh.me/essays/fun | 2026-07-11 | 1318
+- S017 | Stop sharpening your axe. | https://justinwelsh.me/essays/axe | 2026-07-04 | 1382
+- S018 | Manufactured certainty | https://justinwelsh.me/essays/certainty | 2026-06-27 | 1243
+- S019 | Rich and broke. | https://justinwelsh.me/essays/rich-broke | 2026-06-20 | 1485
+- S020 | The two-speed problem. | https://justinwelsh.me/essays/two-speed | 2026-06-13 | 1348
+- S021 | Unreasonable. | https://justinwelsh.me/essays/unreasonable | 2026-06-06 | 2215
+- S022 | Your new rabbit hole. | https://justinwelsh.me/essays/rabbit-hole | 2026-05-30 | 1349
+- S023 | Small enough to see. | https://justinwelsh.me/essays/small-enough | 2026-05-23 | 1487
+- S024 | There’s no map for this. | https://justinwelsh.me/essays/theres-no-map | 2026-05-16 | 1462
+- S025 | Freedom. Sort of. | https://justinwelsh.me/essays/freedom-sort-of | 2026-05-09 | 1172
+- S026 | Sweat the small stuff. | https://justinwelsh.me/essays/sweat | 2026-05-02 | 1241
+- S027 | Selective editing. | https://justinwelsh.me/essays/editing | 2026-04-25 | 1625
+- S028 | Synthetic purpose. | https://justinwelsh.me/essays/synthetic-purpose | 2026-04-18 | 1875
+- S029 | The machine or the life. | https://justinwelsh.me/essays/machine-or-life | 2026-04-11 | 1279
+- S030 | Pick a table. | https://justinwelsh.me/essays/pick-a-table | 2026-04-04 | 1545
+- S031 | Just tell me when you’ll be here. | https://justinwelsh.me/essays/arrival | 2026-03-28 | 1397
+- S032 | Thief of Joy. | https://justinwelsh.me/essays/thief-of-joy | 2026-03-21 | 1456
+- S033 | Missing someone who doesn’t exist. | https://justinwelsh.me/essays/missing-someone | 2026-03-14 | 1629
+- S034 | I'm a crazy person. | https://justinwelsh.me/essays/crazy-person | 2026-03-07 | 1445
+- S035 | Bored to death. | https://justinwelsh.me/essays/bored | 2026-02-28 | 1536
+- S036 | Get out. | https://justinwelsh.me/essays/get-out | 2026-02-21 | 1488
+- S037 | Rock bottom. | https://justinwelsh.me/essays/rock-bottom | 2026-02-14 | 1480
+- S038 | He was only 25. | https://justinwelsh.me/essays/25 | 2026-02-07 | 1313
+- S039 | One person away. | https://justinwelsh.me/essays/one-person | 2026-01-31 | 1165
+- S040 | Being a purple squirrel. | https://justinwelsh.me/essays/purple-squirrel | 2026-01-24 | 1412
+- S041 | Small by design. | https://justinwelsh.me/essays/small-by-design | 2026-01-17 | 1413
+- S042 | You've changed. | https://justinwelsh.me/essays/youve-changed | 2025-12-13 | 1300
+- S043 | This is 2022 all over again. | https://justinwelsh.me/essays/2022-launch | 2025-11-08 | 1389
+- S044 | “Future You” isn't coming to save you. | https://justinwelsh.me/essays/future-you | 2025-10-04 | 1334
+- S045 | Why I drink coffee at 10:47 AM on Thursdays. | https://justinwelsh.me/essays/coffee-on-thursdays | 2025-08-30 | 975
+- S046 | The day I 7x'd my prices (and it worked) | https://justinwelsh.me/essays/how-i-raised-my-prices | 2025-07-26 | 1555
+- S047 | The anti-VC playbook. | https://justinwelsh.me/essays/the-anti-vc-playbook | 2025-06-21 | 1178
+- S048 | Creator vs. Operator | https://justinwelsh.me/essays/creator-vs-operator | 2025-05-17 | 999
+- S049 | Willpower is a lie. | https://justinwelsh.me/essays/willpower-is-a-lie | 2025-04-12 | 1092
+- S050 | The hidden cost of being perfect | https://justinwelsh.me/essays/the-hidden-cost-of-being-perfect | 2025-03-08 | 988
+- S051 | The hidden power of being boring | https://justinwelsh.me/essays/the-hidden-power-of-being-boring | 2025-02-01 | 895
+- S052 | The money-first trap | https://justinwelsh.me/essays/money-first-trap | 2024-12-28 | 1112
+- S053 | Learn to trust yourself | https://justinwelsh.me/essays/learn-to-trust-yourself | 2024-11-23 | 638
+- S054 | What if fear is your secret weapon? | https://justinwelsh.me/essays/what-if-fear-is-your-secret-weapon | 2024-10-19 | 858
+- S055 | Making money is hard | https://justinwelsh.me/essays/making-money-is-hard | 2024-09-14 | 1355
+- S056 | Should you have an email newsletter? (Myth vs. Reality | https://justinwelsh.me/essays/should-you-have-an-email-newsletter-myth-vs-reality | 2024-08-10 | 1281
+- S057 | The 5-4-3-2-1 formula that boosted sales by 27% | https://justinwelsh.me/essays/the-5-4-3-2-1-formula-that-boosted-sales-by-27 | 2024-07-06 | 874
+- S058 | Behind-the-Scenes of a $1.613M Course Launch | https://justinwelsh.me/essays/behind-the-scenes-of-a-1-613m-course-launch | 2024-06-01 | 1064
+- S059 | Nobody knows you exist. Now what? | https://justinwelsh.me/essays/nobody-knows-you-exist-now-what | 2024-04-27 | 1075
+- S060 | A 6-Step Framework for Persuasive Writing | https://justinwelsh.me/essays/a-6-step-framework-for-persuasive-writing | 2024-03-23 | 758
+- S061 | Revealed: The Social Media 'Game' | https://justinwelsh.me/essays/the-social-media-game-revealed | 2024-02-17 | 1851
+- S062 | How to Use 'Engagement Loops' to Grow Your Brand & Business | https://justinwelsh.me/essays/engagement-loops | 2024-01-13 | 701
+- S063 | 5 Questions That Will Help You Win More Business | https://justinwelsh.me/essays/5-questions-that-will-help-you-win-more-business | 2023-12-09 | 1309
+- S064 | Almost Everyone Gets Failure Wrong | https://justinwelsh.me/essays/almost-everyone-gets-failure-wrong | 2023-11-04 | 898
+- S065 | The Power of Repeatable Content | https://justinwelsh.me/essays/the-power-of-repeatable-content | 2023-09-30 | 528
+- S066 | How to Build a 730-Day Content Library | https://justinwelsh.me/essays/build-a-content-library | 2023-08-26 | 912
+- S067 | You're Missing Potential Customers | https://justinwelsh.me/essays/youre-missing-potential-customers | 2023-07-22 | 807
+- S068 | The 5 Phases of Solopreneurship | https://justinwelsh.me/essays/the-5-phases-of-solopreneurship | 2023-06-17 | 1314
+- S069 | Boost Your Biz: Pinpoint Your 20% High-Impact Tasks | https://justinwelsh.me/essays/boost-your-biz-pinpoint-your-20-high-impact-tasks | 2023-05-13 | 880
+- S070 | How Anthony built a $100,000 side business (in just 12 months) | https://justinwelsh.me/essays/how-anthony-built-a-100-000-side-business-in-just-12-months | 2023-04-08 | 1116
+- S071 | An Experiment for 4x Conversion | https://justinwelsh.me/essays/an-experiment-for-4x-conversion | 2023-03-04 | 458
+- S072 | The 4P Formula for Better Content (that converts) | https://justinwelsh.me/essays/the-4p-formula-for-better-content-that-converts | 2023-01-28 | 301
+- S073 | Use Anti-Goals to Stop Doing What You Hate | https://justinwelsh.me/essays/use-anti-goals-to-stop-doing-what-you-hate | 2022-12-24 | 550
+- S074 | A 30-minute Conversation Led to a $2,243 Twitter thread. | https://justinwelsh.me/essays/a-30-minute-conversation-led-to-a-2-243-twitter-thread | 2022-11-19 | 925
+- S075 | My 2 Favorite Ways to Start a Side Business | https://justinwelsh.me/essays/my-2-favorite-ways-to-start-a-side-business | 2022-10-15 | 1100
+- S076 | What I Learned from Impostor Syndrome | https://justinwelsh.me/essays/what-i-learned-from-impostor-syndrome | 2022-09-10 | 1075
+- S077 | Your Content is Obvious. It Shouldn't Be. | https://justinwelsh.me/essays/your-content-is-obvious-it-shouldnt-be | 2022-08-06 | 779
+- S078 | 4 Questions for Better Weekly Productivity | https://justinwelsh.me/essays/4-questions-for-better-weekly-productivity | 2022-07-02 | 1011
+- S079 | 4 Side Hustles to Earn $100,000+ | https://justinwelsh.me/essays/4-side-hustles-to-earn-100-000 | 2022-05-28 | 1042
+- S080 | How to Go Viral on LinkedIn in 3 Steps | https://justinwelsh.me/essays/the-anatomy-of-a-viral-linkedin-post | 2022-04-23 | 962
+- S081 | The System Behind 9 Twitter Threads With 6M+ Impressions. | https://justinwelsh.me/essays/the-system-behind-9-twitter-threads-with-6m-impressions | 2022-03-19 | 678
+- S082 | The Myth of the "Masterclass" | https://justinwelsh.me/essays/the-myth-of-the-masterclass | 2022-02-12 | 607
+- S083 | It Doesn't Hurt to Ask (for more sales) | https://justinwelsh.me/essays/it-doesnt-hurt-to-ask-for-more-sales | 2022-01-08 | 275
