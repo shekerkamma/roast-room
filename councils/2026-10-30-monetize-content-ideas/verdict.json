@@ -1,0 +1,33 @@
+{
+  "label": "GO",
+  "call": "Sell C, a fixed-scope $2,000 done-for-you install on the client's own API key, to your warm network now, and put a $29 founding-plan page for B in the same messages. Build nothing hosted until the prepay bar clears.",
+  "recommended": "C",
+  "why": [
+    { "point": "B cannot reach $5k a month in 90 days: 173 to 263 payers from zero.", "seat": "Hormozi", "framework": "Business types" },
+    { "point": "Three C sales a month is $6,000 up front, on the client's API key.", "seat": "Buffett", "framework": "Birds in the bush" },
+    { "point": "Hand installs teach what B should be.", "seat": "Graham", "framework": "Do things that don't scale" },
+    { "point": "A $29 payment page tests B's demand without building it.", "seat": "Naval", "framework": "Feedback from reality" }
+  ],
+  "minority": { "seat": "Naval", "quote": "Recurring is not the same as owned. With B, revenue arrives while he sleeps. With the retainer, it arrives only while he works.", "would_have_to_be_true": "Install hours fall fast enough that C's setup script becomes B's onboarding, and strangers prepay." },
+  "next_steps": [
+    { "when": "This week", "action": "Send the one-page C offer and the $29 founding-plan page to 15 to 20 consultants and agency owners." },
+    { "when": "By 2026-11-20", "action": "Log install 1's hours, count prepays, and measure one user's real ScrapeCreators bill." },
+    { "when": "2026-12-15", "action": "Decide on B from daily use, prepay count, and API cost." }
+  ],
+  "kill_criteria": "Fewer than 2 C sales from 15 pitches by 2026-11-13, or install 3 taking as long as install 1: stop C and keep the plugin as a free lead magnet.",
+  "conditions": [
+    "Fixed install scope; extra work is a change order at $150 an hour",
+    "Install planned at 12 hours and logged; over 12 on install 1 raises the price to $3,000",
+    "Build B only if 50 people prepay $29 by 2026-11-20 and API cost is $5 or less per user",
+    "At least 2 C sales from the first 15 warm pitches by 2026-11-13"
+  ],
+  "fights": [
+    { "crux": "Is the $2,000 install a product step or consulting in disguise?", "story": "Naval called it rented time; the other three called it a fixed-scope offer. It resolved on a test: one script, logged hours that fall install over install. Naval moved after Graham's learning-loop argument." },
+    { "crux": "Can a $29 hosted plan reach $5k a month in 90 days?", "story": "Three seats said no from the start. Naval conceded in Round 2 that shared scraping fixes B's margin, not its speed." },
+    { "crux": "Test B with prepayment now, or wait for C clients to ask?", "story": "Buffett wanted to wait for ten C clients; Naval showed that gate opens after the window closes. All four now run the page this week." }
+  ],
+  "amendments": [],
+  "cheapest_test": "The $29 payment page plus the C pitch in the same 15 messages, this week.",
+  "revisit": "2026-12-15, with install hours, daily-use counts, prepay count, and per-user API cost.",
+  "override_note": ""
+}

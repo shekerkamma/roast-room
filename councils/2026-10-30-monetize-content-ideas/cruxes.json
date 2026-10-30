@@ -1,0 +1,27 @@
+{
+  "cruxes": [
+    {
+      "question": "Is the $2,000 install a product step or consulting in disguise?",
+      "sides": [
+        { "position": "Fixed-scope offer that funds and teaches B", "seats": ["Hormozi", "Buffett", "Graham"] },
+        { "position": "Rented time under another name", "seats": ["Naval"] }
+      ]
+    },
+    {
+      "question": "Can a $29 hosted plan reach $5k a month in 90 days?",
+      "sides": [
+        { "position": "No: 173 to 263 payers from zero", "seats": ["Hormozi", "Graham", "Buffett"] },
+        { "position": "Shared scraping fixes margin; own it", "seats": ["Naval"] }
+      ]
+    },
+    {
+      "question": "Test B with prepayment now, or wait for C clients to ask?",
+      "sides": [
+        { "position": "Live $29 payment page this week", "seats": ["Naval", "Hormozi"] },
+        { "position": "Only after ten C clients ask", "seats": ["Buffett"] }
+      ]
+    }
+  ],
+  "unanimous": false,
+  "note": "Three seats want the $2,000 install now; Naval says only the hosted plan builds something the founder owns."
+}
