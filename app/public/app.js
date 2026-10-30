@@ -1,5 +1,10 @@
 import { downloadVerdictPdf } from "./pdf.js";
 
+// Static mode (the GitHub Pages build from scripts/export-static.mjs): the room replays exported
+// councils from api/*.json and cannot run or stream a council. The live server leaves this off.
+const STATIC = document.documentElement.dataset.static === "1";
+const api = (p) => (STATIC ? p.replace(/^\/api\//, "api/") + ".json" : p);
+
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -110,7 +115,7 @@ async function boot() {
   reset();
   typeIn($("#composer h2"));
   typeIn($("#waiting h2"));
-  const ss = await fetch("/api/sessions").then((x) => x.json());
+  const ss = await fetch(api("/api/sessions")).then((x) => x.json());
   if (ss.running) attach(ss.running);
   else if (ss.live) attach(ss.live);
   refreshUsage();
@@ -120,7 +125,7 @@ async function boot() {
 
 // The roster (every seat, plus the default board) comes from the skill's roster.json.
 async function refreshSeats() {
-  const r = await fetch("/api/seats").then((x) => x.json());
+  const r = await fetch(api("/api/seats")).then((x) => x.json());
   state.seats = r.seats;
   state.byKey = Object.fromEntries(r.seats.map((s) => [s.key, s]));
   state.board = (r.board?.default || []).filter((k) => state.byKey[k]);
@@ -132,7 +137,7 @@ async function refreshSeats() {
 // a council started in Claude Code shows up here on its own
 const seenLive = new Set();
 async function watchForLive() {
-  const ss = await fetch("/api/sessions").then((x) => x.json()).catch(() => null);
+  const ss = await fetch(api("/api/sessions")).then((x) => x.json()).catch(() => null);
   const id = ss?.live || ss?.running;
   if (!id || seenLive.has(id) || id === state.session) return;
   seenLive.add(id);
@@ -509,7 +514,7 @@ function captionFor(who) {
   c.style.animation = "none"; void c.offsetWidth; c.style.animation = "";
   const s = state.byKey[who];
   $("#capAv").className = `cap-av${s ? "" : " chair"}`;
-  $("#capAv").innerHTML = `<img src="${s ? portrait(who) : "/brand/ais-symbol.png"}" alt="">`;
+  $("#capAv").innerHTML = `<img src="${s ? portrait(who) : "brand/ais-symbol.png"}" alt="">`;
   $("#capWho").textContent = s ? s.name : "The Chair";
 }
 
@@ -775,7 +780,7 @@ function onVerdict(ev) {
 
 // ------------------------------------------------------------- history + replay
 async function openHistory() {
-  const { sessions } = await fetch("/api/sessions").then((x) => x.json());
+  const { sessions } = await fetch(api("/api/sessions")).then((x) => x.json());
   $("#historyList").innerHTML = sessions.length
     ? sessions.map((s) => `<li><button data-id="${esc(s.id)}"><b>${esc(s.title)}</b><small>${esc(s.id.slice(0, 10))} · ${esc(s.mode)} · ${esc(s.status)}</small></button>${s.status === "done" ? `<button class="pdf" type="button" data-pdf="${esc(s.id)}" title="Download the verdict as a PDF">PDF</button>` : ""}</li>`).join("")
     : '<li class="muted">No sessions yet. Convene the council once and it shows up here.</li>';
@@ -784,7 +789,7 @@ async function openHistory() {
 }
 
 async function replay(id) {
-  const j = await fetch(`/api/sessions/${encodeURIComponent(id)}`).then((x) => x.json());
+  const j = await fetch(api(`/api/sessions/${encodeURIComponent(id)}`)).then((x) => x.json());
   begin(id);
   state.replaying = true;
   for (const ev of j.events) {
@@ -887,7 +892,7 @@ async function savePdf(btn) {
   try {
     let setup = state.setup, verdict = state.verdict;
     if (id) { // a past session from the history list
-      const j = await fetch("/api/sessions/" + encodeURIComponent(id)).then((x) => x.json());
+      const j = await fetch(api("/api/sessions/" + encodeURIComponent(id))).then((x) => x.json());
       setup = j.events.find((e) => e.type === "setup");
       verdict = [...j.events].reverse().find((e) => e.type === "verdict");
     }
@@ -912,7 +917,7 @@ function toast(msg) {
   toastTimer = setTimeout(() => (t.hidden = true), 6000);
 }
 async function refreshUsage() {
-  const u = await fetch("/api/usage").then((x) => x.json()).catch(() => null);
+  const u = STATIC ? null : await fetch("/api/usage").then((x) => x.json()).catch(() => null);
   if (!u || !u.calls) { $("#usage").textContent = ""; return; }
   const k = (n) => (n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : `${Math.round(n / 1000)}k`);
   $("#usage").textContent = `${u.calls} calls · ${k(u.input + u.cacheRead + u.cacheWrite)} in · ${k(u.output)} out`;

@@ -1,0 +1,20 @@
+{
+  "option": "B",
+  "label": "GO",
+  "recommendation": "Run direct outreach to the 20 consultants now, at full price with a guarantee, and open one partner conversation only after install 1 is recorded.",
+  "conditions": [
+    "All 20 messages sent by 2026-11-02 with the price and a direct ask",
+    "Full price, guarantee, $5k reserve untouched",
+    "Tuning capped at 4 hours per client in writing",
+    "Install 1 logged by 2026-11-13; over 12 hours caps November at two and the next quote at $3,000",
+    "One buyer or inbound from outside the 20 by 2026-11-30",
+    "One partner call by 2026-11-20, partners paid only from collected cash"
+  ],
+  "next_steps": [
+    "By 2026-11-02: send the 20 messages",
+    "By 2026-11-13: install 1 done and logged",
+    "2026-11-30: count installs and outside signals"
+  ],
+  "cheapest_test": "Sample feeds on the real competitors of the 5 warmest contacts, sent with the price this week.",
+  "kill_criteria": "Fewer than 5 of the 20 reply by 2026-11-06: stop and rebuild the offer."
+}

@@ -1,0 +1,27 @@
+{
+  "cruxes": [
+    {
+      "question": "Should agency partners start now, before any install is proven?",
+      "sides": [
+        { "position": "Yes: partners own lists and trust", "seats": ["Hormozi", "Martell"] },
+        { "position": "No: nobody sells an unproven offer", "seats": ["Graham", "Welsh", "Buffett"] }
+      ]
+    },
+    {
+      "question": "Do three installs plus selling fit in about 43 hours?",
+      "sides": [
+        { "position": "Yes, at about 10 hours each", "seats": ["Martell", "Gary V"] },
+        { "position": "Only if each install stays under 15 hours", "seats": ["Hormozi", "Buffett", "Welsh"] }
+      ]
+    },
+    {
+      "question": "Do warm yeses from friends prove real demand?",
+      "sides": [
+        { "position": "Loyalty, not demand; protect reputation", "seats": ["Graham", "Buffett"] },
+        { "position": "Post each install so strangers buy next", "seats": ["Gary V", "Welsh"] }
+      ]
+    }
+  ],
+  "unanimous": true,
+  "note": "All six back direct outreach, so the Chair is making the partner channel argue its case at full strength."
+}
