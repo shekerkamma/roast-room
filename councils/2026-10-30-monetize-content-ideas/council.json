@@ -1,0 +1,20 @@
+{
+  "title": "Monetize the content-ideas plugin",
+  "decision": "How to turn the content-ideas plugin into revenue in the next 90 days.",
+  "mode": "quick",
+  "options": [
+    { "id": "A", "label": "Free lead magnet for consulting" },
+    { "id": "B", "label": "Paid hosted plan at $29/month" },
+    { "id": "C", "label": "Done-for-you setup at $2,000" },
+    { "id": "D", "label": "Keep doing what I do now" }
+  ],
+  "weights": {
+    "hormozi": { "weight": 3, "reason": "Pricing and offer design are the decision" },
+    "graham": { "weight": 2, "reason": "Demand for a paid version is untested" },
+    "buffett": { "weight": 2, "reason": "Cash, API costs, downside to consulting income" },
+    "naval": { "weight": 2, "reason": "Product leverage versus renting founder time" }
+  },
+  "seats": ["hormozi", "graham", "buffett", "naval"],
+  "brief": "A solo founder with about $15k a month in AI consulting wants $5k a month of new revenue from the content-ideas plugin within 90 days, using about 10 hours a week. They lean toward a $29 hosted plan.",
+  "assumptions": ["Plugin revenue today is $0 (assumed)", "Consulting brings about $15k a month (assumed)", "10 founder hours a week and $5k cash (assumed)"]
+}
