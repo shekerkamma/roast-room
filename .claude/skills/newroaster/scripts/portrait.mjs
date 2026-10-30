@@ -14,6 +14,9 @@
 // <dir> is the seat's portrait folder, <build>/portrait/. It holds photo.jpg, cand1.png...,
 // base.png, open.png, mid.png, and blink.png. Needs KIE_AI_API_KEY (kie.ai) in the
 // environment or the project .env. A base candidate or edit costs a few credits.
+// Without a kie.ai key it uses Google's Gemini image model (Nano Banana Pro) with
+// GEMINI_API_KEY or GOOGLE_API_KEY instead, with the same prompts and references.
+// PORTRAIT_ENGINE=kie|gemini forces one; PORTRAIT_GEMINI_MODEL picks the Gemini model.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -33,20 +36,32 @@ const EDITS = {
   blink: `Edit this image: the character blinks, both eyes fully closed with relaxed eyelids. ${KEEP} Only the eyes change.`,
 };
 
-function key() {
-  if (process.env.KIE_AI_API_KEY) return process.env.KIE_AI_API_KEY;
+function envKey(names) {
+  for (const n of names) if (process.env[n]) return process.env[n];
   let dir = process.cwd();
   for (let i = 0; i < 8; i++) {
     const p = path.join(dir, ".env");
     if (fs.existsSync(p)) {
-      const m = fs.readFileSync(p, "utf8").match(/^\s*KIE_AI_API_KEY\s*=\s*["']?([^"'\r\n]+)/m);
-      if (m && m[1].trim()) return m[1].trim();
+      for (const n of names) {
+        const m = fs.readFileSync(p, "utf8").match(new RegExp(`^\\s*${n}\\s*=\\s*["']?([^"'\\r\\n]+)`, "m"));
+        if (m && m[1].trim()) return m[1].trim();
+      }
     }
     const up = path.dirname(dir);
     if (up === dir) break;
     dir = up;
   }
-  console.error("portrait: no KIE_AI_API_KEY. Get a key at https://kie.ai/api-key and add KIE_AI_API_KEY=... to the project .env.");
+  return "";
+}
+
+const KIE_KEY = envKey(["KIE_AI_API_KEY"]);
+const GEMINI_KEY = envKey(["GEMINI_API_KEY", "GOOGLE_API_KEY"]);
+const ENGINE = process.env.PORTRAIT_ENGINE || (KIE_KEY ? "kie" : GEMINI_KEY ? "gemini" : "");
+const GEMINI_MODEL = process.env.PORTRAIT_GEMINI_MODEL || "gemini-nano-banana-2.1";
+function key() {
+  if (ENGINE === "kie" && KIE_KEY) return KIE_KEY;
+  if (ENGINE === "gemini" && GEMINI_KEY) return GEMINI_KEY;
+  console.error("portrait: no image key. Add KIE_AI_API_KEY (https://kie.ai/api-key) or GEMINI_API_KEY (Google AI Studio) to ~/.config/content/.env.");
   process.exit(3);
 }
 
@@ -66,8 +81,24 @@ async function upload(file) {
   return url;
 }
 
+/** One Gemini image job: the prompt plus the reference images in order, saved to `out`. */
+async function geminiStill(prompt, refs, out) {
+  const mime = (f) => (/\.jpe?g$/i.test(f) ? "image/jpeg" : "image/png");
+  const parts = [{ text: prompt }, ...refs.map((f) => ({ inline_data: { mime_type: mime(f), data: fs.readFileSync(f).toString("base64") } }))];
+  const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "x-goog-api-key": key() },
+    body: JSON.stringify({ contents: [{ parts }], generationConfig: { responseModalities: ["IMAGE"], imageConfig: { aspectRatio: "1:1" } } }),
+  });
+  const j = await r.json();
+  const img = (j?.candidates?.[0]?.content?.parts || []).find((p) => p.inlineData || p.inline_data);
+  if (!img) throw new Error(`${path.basename(out)}: ${JSON.stringify(j?.error || j?.candidates?.[0]?.finishReason || j).slice(0, 300)}`);
+  fs.writeFileSync(out, Buffer.from((img.inlineData || img.inline_data).data, "base64"));
+  return out;
+}
+
 /** One Seedream 5 Pro image-to-image job, saved to `out`. */
-async function still(prompt, refs, out) {
+async function kieStill(prompt, refs, out) {
   const image_urls = await Promise.all(refs.map(upload));
   const r = await fetch(`${API}/api/v1/jobs/createTask`, {
     method: "POST", headers: H,
@@ -92,6 +123,8 @@ async function still(prompt, refs, out) {
     return out;
   }
 }
+
+const still = (prompt, refs, out) => (ENGINE === "gemini" ? geminiStill : kieStill)(prompt, refs, out);
 
 /** Run jobs in parallel; a failed job is retried once. */
 async function all(jobs) {
@@ -121,11 +154,12 @@ if (cmd === "photo") {
   fs.writeFileSync(path.join(dir, "photo-source.txt"), arg + "\n");
   console.log(`saved ${out}. Look at it before going on: one real person, face clear and toward the camera.`);
 } else if (cmd === "probe") {
+  if (ENGINE === "gemini") { key(); console.log(`engine: gemini (${GEMINI_MODEL})`); process.exit(0); }
   H = { "Content-Type": "application/json", Authorization: `Bearer ${key()}` };
   console.log("kie.ai credit:", (await (await fetch(`${API}/api/v1/chat/credit`, { headers: H })).json()).data);
 } else if (cmd === "base") {
   if (!arg) throw new Error('usage: portrait.mjs base <dir> "<who and what they wear>" [--n 2]');
-  H = { "Content-Type": "application/json", Authorization: `Bearer ${key()}` };
+  if (ENGINE !== "gemini") H = { "Content-Type": "application/json", Authorization: `Bearer ${key()}` };
   const n = Number(rest[rest.indexOf("--n") + 1]) || 2;
   const refs = [need(path.join(dir, "photo.jpg")), need(STYLE_REF)];
   await all(Array.from({ length: n }, (_, i) => [`${STYLE} Person: ${arg}`, refs, path.join(dir, `cand${i + 1}.png`)]));
@@ -133,7 +167,7 @@ if (cmd === "photo") {
   fs.copyFileSync(need(path.join(dir, `cand${arg}.png`)), path.join(dir, "base.png"));
   console.log(`base.png = cand${arg}.png`);
 } else if (cmd === "frames") {
-  H = { "Content-Type": "application/json", Authorization: `Bearer ${key()}` };
+  if (ENGINE !== "gemini") H = { "Content-Type": "application/json", Authorization: `Bearer ${key()}` };
   const base = need(path.join(dir, "base.png"));
   await all(Object.entries(EDITS).map(([shape, prompt]) => [prompt, [base], path.join(dir, `${shape}.png`)]));
 } else {
