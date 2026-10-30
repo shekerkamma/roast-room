@@ -1,0 +1,41 @@
+{
+  "label": "GO WITH CONDITIONS",
+  "call": "Quote $3,500 (option A) from install #4 in December, once 3 installs close at $2,000 by 2026-11-30 at a 30% close rate on calls held. Cap installs at 2 a month and keep the $500 tier off the price list until its runbook passes a paid test.",
+  "recommended": "A",
+  "why": [
+    { "point": "At $2,000 the $5k goal eats 31 to 37 of a 43-hour month; $3,500 needs about 18 to 21 hours.", "seat": "Martell", "framework": "Buyback Rate" },
+    { "point": "With tuning counted, $2,000 pays about $121 an hour, 0.8x delivery cost against a 5 to 10x rule.", "seat": "Hormozi", "framework": "5 to 10x delivery cost" },
+    { "point": "Three closes at $2,000 in November prove demand first, so a December stall can only be the price.", "seat": "Graham", "framework": "Make something people want" },
+    { "point": "Record installs 1 to 3; the runbook built from them is the part the founder owns.", "seat": "Naval", "framework": "Three forms of leverage" }
+  ],
+  "minority": { "seat": "Naval", "quote": "At $3,500 you are still renting your time, just at a better rate.", "would_have_to_be_true": "A stranger can install the plugin from the runbook with 1.5 hours or less of founder time." },
+  "next_steps": [
+    { "when": "This week", "action": "Start the install 1 time log with a weekly ideas count, and screen-record every install." },
+    { "when": "By 2026-11-13", "action": "Log install 1's hours and write the tuning definition of done with the capped guarantee." },
+    { "when": "2026-12-01", "action": "Count closes and close rate; if the gate clears, quote $3,500 to the next 10 prospects." }
+  ],
+  "kill_criteria": "Under 3 closes by 2026-11-30 keeps $2,000; 0 of 10 closes at $3,500 by 2026-12-31 goes back to $2,000; kill C if its tester needs over 3 founder hours.",
+  "conditions": [
+    "3 installs close at $2,000 by 2026-11-30, 30% or better of calls held",
+    "Tuning capped at 5 hours with three named deliverables and two check-ins",
+    "Guarantee: 20 usable ideas a week by day 30, then up to 3 free hours, then a $1,000 partial refund",
+    "No more than 2 installs a month at any price"
+  ],
+  "fights": [
+    { "crux": "Raise the price before a single install is delivered?", "story": "Four seats wanted to raise and Graham wanted to hold. Graham moved when the capacity math showed B cannot hit the goal; the others added November's 3 closes as a gate." },
+    { "crux": "Is the $500 self-serve tier leverage now, or a distraction?", "story": "Naval stood alone for C now. He moved to A now and C later because there is nothing to document yet and no audience to sell to." },
+    { "crux": "Does $2,000 already beat consulting per hour?", "story": "Graham's $160 an hour left out tuning. Buffett put break-even at 13.3 hours; Graham then showed capacity alone justifies the raise, so the log informs rather than gates." }
+  ],
+  "amendments": [
+    { "seat": "Buffett", "amendment": "Cap the free-tuning guarantee and add a partial refund.", "adopted": true, "reason": "Unlimited free tuning cancelled the 5-hour cap; Welsh's 3 hours and Buffett's $1,000 refund used." },
+    { "seat": "Welsh", "amendment": "Cap the guarantee at 3 more hours, and get install 1's day-14 ideas count.", "adopted": true, "reason": "Adopted with Buffett's refund; the day-14 count is tracked as a measurement, not a gate." },
+    { "seat": "Martell", "amendment": "Cap installs at 2 a month at any price, and log the weekly ideas count.", "adopted": true, "reason": "The calendar math went unanswered." },
+    { "seat": "Graham", "amendment": "Make the hours log an input, not a gate; count close rate per call held.", "adopted": true, "reason": "Capacity alone justifies the raise at 13 hours, and 3 of 20 messages is only 15%." },
+    { "seat": "Hormozi", "amendment": "Raise the December test from 5 prospects to 10.", "adopted": true, "reason": "Zero closes from 5 quotes happens 17% of the time at a 30% close rate." },
+    { "seat": "Hormozi", "amendment": "Tell November prospects now that the price rises on 2026-12-01.", "adopted": false, "reason": "It commits to the raise before November's gate clears and breaks the control the room agreed." },
+    { "seat": "Naval", "amendment": "Build the runbook regardless; pass C at 1.5 founder hours, rewrite up to 3, kill above 3.", "adopted": true, "reason": "No objection." }
+  ],
+  "cheapest_test": "Quote $3,500 to the next 10 qualified prospects in December.",
+  "revisit": "2027-01-05, with closes and close rate at $3,500, hours per install, the ideas count, and the runbook tester result.",
+  "override_note": ""
+}

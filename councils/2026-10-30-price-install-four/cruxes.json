@@ -1,0 +1,27 @@
+{
+  "cruxes": [
+    {
+      "question": "Raise the price before a single install is delivered?",
+      "sides": [
+        { "position": "Yes, gated on proof or logged hours", "seats": ["Hormozi", "Buffett", "Martell", "Welsh"] },
+        { "position": "No, hold $2,000 until 3 installs close", "seats": ["Graham"] }
+      ]
+    },
+    {
+      "question": "Is the $500 self-serve tier leverage now, or a distraction?",
+      "sides": [
+        { "position": "Leverage now, launch it", "seats": ["Naval"] },
+        { "position": "Not yet: record installs, build it later", "seats": ["Hormozi", "Welsh", "Martell", "Buffett", "Graham"] }
+      ]
+    },
+    {
+      "question": "Does $2,000 already beat consulting per hour?",
+      "sides": [
+        { "position": "Yes, at about $150 an hour", "seats": ["Graham"] },
+        { "position": "No, not once tuning is counted", "seats": ["Hormozi", "Buffett", "Martell", "Naval"] }
+      ]
+    }
+  ],
+  "unanimous": false,
+  "note": "The room splits on whether to price on proof you have or proof you expect, and whether the cheap tier is leverage or a second job."
+}

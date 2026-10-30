@@ -1,0 +1,21 @@
+{
+  "title": "Price of install #4 onward",
+  "decision": "What to charge for the done-for-you plugin install from install #4 onward.",
+  "mode": "full",
+  "options": [
+    { "id": "A", "label": "Raise to $3,500" },
+    { "id": "B", "label": "Keep $2,000" },
+    { "id": "C", "label": "Keep $2,000, add $500 self-serve setup" }
+  ],
+  "weights": {
+    "hormozi": { "weight": 3, "reason": "Pricing and offer design are the decision" },
+    "graham": { "weight": 2, "reason": "Demand at any price is barely tested" },
+    "naval": { "weight": 2, "reason": "Option C trades hours for a leveraged product" },
+    "welsh": { "weight": 2, "reason": "Solo operator pricing productized offers" },
+    "martell": { "weight": 1, "reason": "Each install's cost to 10 hours a week" },
+    "buffett": { "weight": 1, "reason": "Downside to consulting income and the $5k reserve" }
+  },
+  "seats": ["hormozi", "graham", "naval", "welsh", "martell", "buffett"],
+  "brief": "A solo AI consultant sells a $2,000 done-for-you install of the content-ideas plugin and plans 3 installs by 2026-11-30. From install #4 on: raise to $3,500, keep $2,000, or keep $2,000 and add a $500 self-serve setup. The founder leans toward raising.",
+  "assumptions": ["Consulting revenue about $15k a month (assumed)", "10 to 15 hours per install (assumed)", "10 founder hours a week and $5k set aside (assumed)", "Lean toward A (assumed)"]
+}
