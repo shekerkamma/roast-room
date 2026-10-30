@@ -38,7 +38,9 @@ def main():
             nq = norm(q)
             if len(nq.split()) < 6:
                 continue
-            if nq in brain_text:
+            # an elided quote ("A... B") is verified part by part
+            parts = [norm(x) for x in re.split(r"\.\.\.|\u2026", q)]
+            if nq in brain_text or (len(parts) > 1 and all(x in brain_text for x in parts if x)):
                 ok += 1
             elif nq in seen_session or nq in brief:
                 internal += 1
